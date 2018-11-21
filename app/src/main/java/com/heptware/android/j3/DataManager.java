@@ -8,7 +8,7 @@ import java.util.List;
 
 public class DataManager {
 
-    private List<DataManager> list = new ArrayList<>();
+    private final List<DataManager> list = new ArrayList<>();
     private String key;
     private String name;
 
@@ -124,7 +124,8 @@ public class DataManager {
     }
 
 
-    public DataManager addToList(String key, String value) {
-        return new DataManager(key , value);
+    public void addToList(String key, String value) {
+        list.add(new DataManager(key , value));
     }
+
 }

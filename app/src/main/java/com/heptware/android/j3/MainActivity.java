@@ -110,8 +110,7 @@ public class MainActivity extends AppCompatActivity  implements KeyEvent.Callbac
                     public void onClick(DialogInterface dialog, int which) {
                         String key = keyInput.getText().toString();
                         String value = valueInput.getText().toString();
-                        DataManager d = dm.addToList(key , value);
-                        adapter.add(d);
+                        dm.addToList(key , value);
                         adapter.notifyDataSetChanged();
                     }
                 });
